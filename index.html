@@ -1,0 +1,99 @@
+<html>
+<style>
+    #InputArea span {
+        display: inline-block;
+        margin-bottom: 10px;
+    }
+
+    #Steps * {
+        vertical-align: top;
+    }
+
+    #Steps span {
+        padding-top: 60px;
+        display: inline-block;
+    }
+
+    #TreeArray tr {
+        text-align: center;
+    }
+
+    #TreeArray {
+        border-collapse: collapse;
+    }
+
+    #TreeArray td {
+        border: 1px solid #777;
+        padding: 5px;
+        min-width: 20px;
+    }
+
+    #TreeArray tr:first-child td {
+        border-top: 0;
+    }
+
+    #TreeArray tr td:first-child {
+        border-left: 0;
+    }
+
+    #TreeArray tr:last-child td {
+        border-bottom: 0;
+    }
+
+    #TreeArray tr td:last-child {
+        border-right: 0;
+    }
+</style>
+<script src="./Comparator.js"></script>
+<script src="./TreeNode.js"></script>
+<script src="./Tree.js"></script>
+<script src="./AvlTree.js"></script>
+<script src="./VisualTree.js"></script>
+
+<body>
+    <div id="InitializeArea">
+        <h3>Initialize Area</h3>
+
+        <span>Tree Type: </span>
+        <select id="TreeType" onchange="eventTreeTypeChange()">
+            <option value="bst">Binary Search Tree</option>
+            <option value="avl">AVL Tree</option>
+          </select>
+        <br>
+    </div>
+    <div id="InputArea">
+        <h3>Input Area</h3>
+
+        <span>Insert: </span>
+        <input id="InsertField" onkeyup="eventInsertFieldChange(event)" />
+        <br>
+        <span>Delete: </span>
+        <input id="DeleteField" onkeyup="eventDeleteFieldChange(event)" />
+        <br>
+    </div>
+    <hr />
+    <div id="OutputArea">
+        <h3>Output Area</h3>
+
+        <div id="Information">
+            <h4>Information</h4>
+            <span>Pre-order: </span><span id="PreOrder"></span><br>
+            <span>In-order: </span><span id="InOrder"></span><br>
+            <span>Post-order: </span><span id="PostOrder"></span><br>
+            <span>Array: </span><br>
+            <table id="TreeArray">
+                <tr id="IdxTr"></tr>
+                <tr id="ContentTr"></tr>
+            </table><br>
+        </div>
+
+        <div id="Steps">
+            <h4>Steps</h3>
+        </div>
+    </div>
+
+    <script src="./app.js"></script>
+
+</body>
+
+</html>
